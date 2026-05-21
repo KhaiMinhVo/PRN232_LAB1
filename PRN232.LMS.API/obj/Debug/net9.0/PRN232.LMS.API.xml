@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PRN232.LMS.API</name>
+    </assembly>
+    <members>
+        <member name="M:PRN232.LMS.API.Controllers.CoursesController.GetAll(PRN232.LMS.Services.Models.Requests.ListQueryRequest)">
+            <summary>Get courses with search, sort, paging, expand=semester,subject</summary>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.EnrollmentsController.GetAll(PRN232.LMS.Services.Models.Requests.ListQueryRequest)">
+            <summary>
+            Get enrollments with search, sort, paging, expand=student,course
+            </summary>
+            <remarks>
+            Example: GET /api/enrollments?search=active&amp;sort=-enrollDate&amp;page=1&amp;size=20&amp;expand=student,course
+            </remarks>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.SemestersController.GetAll(PRN232.LMS.Services.Models.Requests.ListQueryRequest)">
+            <summary>Get semesters with search, sort, paging</summary>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.StudentsController.GetAll(PRN232.LMS.Services.Models.Requests.ListQueryRequest)">
+            <summary>Get students with search, sort, paging, field selection</summary>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.StudentsController.GetById(System.Int32)">
+            <summary>Get student by ID with full details</summary>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.StudentsController.Create(PRN232.LMS.Services.Models.Requests.CreateStudentRequest)">
+            <summary>Create a new student</summary>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.StudentsController.Update(System.Int32,PRN232.LMS.Services.Models.Requests.UpdateStudentRequest)">
+            <summary>Update an existing student</summary>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.StudentsController.Delete(System.Int32)">
+            <summary>Delete a student</summary>
+        </member>
+        <member name="M:PRN232.LMS.API.Controllers.SubjectsController.GetAll(PRN232.LMS.Services.Models.Requests.ListQueryRequest)">
+            <summary>Get subjects with search, sort, paging</summary>
+        </member>
+    </members>
+</doc>

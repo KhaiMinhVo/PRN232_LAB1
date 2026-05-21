@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: lms-sqlserver
+    environment:
+      MSSQL_SA_PASSWORD: "Prn232@LmsDb!2024"
+      SA_PASSWORD: "Prn232@LmsDb!2024"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P Prn232@LmsDb!2024 -Q 'SELECT 1' -C -b"]
+      interval: 15s
+      retries: 15
+      start_period: 60s
+
+  api:
+    build:
+      context: .
+      dockerfile: PRN232.LMS.API/Dockerfile
+    container_name: lms-api
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db,1433;Database=LmsDb;User Id=sa;Password=Prn232@LmsDb!2024;TrustServerCertificate=True;
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  sqldata:
