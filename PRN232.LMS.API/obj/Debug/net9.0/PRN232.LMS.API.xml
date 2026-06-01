@@ -15,6 +15,11 @@
             Example: GET /api/enrollments?search=active&amp;sort=-enrollDate&amp;page=1&amp;size=20&amp;expand=student,course
             </remarks>
         </member>
+        <member name="M:PRN232.LMS.API.Controllers.EnrollmentsController.GetByCourseId(System.Int32,PRN232.LMS.Services.Models.Requests.ListQueryRequest)">
+            <summary>
+            Get enrollments by course ID
+            </summary>
+        </member>
         <member name="M:PRN232.LMS.API.Controllers.SemestersController.GetAll(PRN232.LMS.Services.Models.Requests.ListQueryRequest)">
             <summary>Get semesters with search, sort, paging</summary>
         </member>

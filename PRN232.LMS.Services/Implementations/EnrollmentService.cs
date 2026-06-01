@@ -22,7 +22,7 @@ public class EnrollmentService : IEnrollmentService
         _courseRepo = courseRepo;
     }
 
-    public async Task<ApiResponse<PagedResponse<EnrollmentResponse>>> GetAllAsync(ListQueryRequest query)
+    public async Task<ApiResponse<PagedResponse<EnrollmentResponse>>> GetAllAsync(ListQueryRequest query, int? courseId = null)
     {
         var expands = query.Expand?.Split(',').Select(e => e.Trim().ToLower()).ToHashSet()
                      ?? new HashSet<string>();
@@ -30,7 +30,7 @@ public class EnrollmentService : IEnrollmentService
         bool wantCourse  = expands.Contains("course");
 
         var (items, total) = await _repo.GetAllAsync(
-            query.Search, query.Sort, query.Page, query.Size, wantStudent, wantCourse);
+            query.Search, query.Sort, query.Page, query.Size, wantStudent, wantCourse, courseId);
 
         var responses = items.Select(e => MapToResponse(e, wantStudent, wantCourse));
 

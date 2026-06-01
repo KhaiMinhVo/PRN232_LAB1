@@ -6,7 +6,7 @@ public interface IEnrollmentRepository
 {
     Task<(IEnumerable<Enrollment> Items, int Total)> GetAllAsync(
         string? search, string? sort, int page, int size,
-        bool includeStudent, bool includeCourse);
+        bool includeStudent, bool includeCourse, int? courseId = null);
     Task<Enrollment?> GetByIdAsync(int id, bool includeStudent = false, bool includeCourse = false);
     Task<Enrollment> CreateAsync(Enrollment enrollment);
     Task<Enrollment> UpdateAsync(Enrollment enrollment);

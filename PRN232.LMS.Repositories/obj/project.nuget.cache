@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mDyldENNUwI=",
+  "dgSpecHash": "eA2+9RTZzS4=",
   "success": true,
-  "projectFilePath": "d:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj",
+  "projectFilePath": "D:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vopha\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\vopha\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

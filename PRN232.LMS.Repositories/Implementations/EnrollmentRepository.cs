@@ -13,9 +13,11 @@ public class EnrollmentRepository : IEnrollmentRepository
 
     public async Task<(IEnumerable<Enrollment> Items, int Total)> GetAllAsync(
         string? search, string? sort, int page, int size,
-        bool includeStudent, bool includeCourse)
+        bool includeStudent, bool includeCourse, int? courseId = null)
     {
         var query = _context.Enrollments.AsNoTracking().AsQueryable();
+
+        if (courseId.HasValue) query = query.Where(e => e.CourseId == courseId.Value);
 
         if (includeStudent) query = query.Include(e => e.Student);
         if (includeCourse)  query = query.Include(e => e.Course).ThenInclude(c => c.Subject);

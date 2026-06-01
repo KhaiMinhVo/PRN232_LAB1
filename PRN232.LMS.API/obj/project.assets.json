@@ -5171,11 +5171,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.API\\PRN232.LMS.API.csproj",
+      "projectUniqueName": "D:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.API\\PRN232.LMS.API.csproj",
       "projectName": "PRN232.LMS.API",
-      "projectPath": "d:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.API\\PRN232.LMS.API.csproj",
+      "projectPath": "D:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.API\\PRN232.LMS.API.csproj",
       "packagesPath": "C:\\Users\\vopha\\.nuget\\packages\\",
-      "outputPath": "d:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.API\\obj\\",
+      "outputPath": "D:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5197,8 +5197,8 @@
           "framework": "net9.0",
           "targetAlias": "net9.0",
           "projectReferences": {
-            "d:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.Services\\PRN232.LMS.Services.csproj": {
-              "projectPath": "d:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.Services\\PRN232.LMS.Services.csproj"
+            "D:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.Services\\PRN232.LMS.Services.csproj": {
+              "projectPath": "D:\\FPTU\\PRN232\\PRN232_LAB1\\PRN232_LAB1\\PRN232.LMS.Services\\PRN232.LMS.Services.csproj"
             }
           }
         }

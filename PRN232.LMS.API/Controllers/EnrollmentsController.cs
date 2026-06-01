@@ -27,6 +27,17 @@ public class EnrollmentsController : ControllerBase
         return Ok(result);
     }
 
+    /// <summary>
+    /// Get enrollments by course ID
+    /// </summary>
+    [HttpGet("/api/courses/{courseId:int}/enrollments")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetByCourseId(int courseId, [FromQuery] ListQueryRequest query)
+    {
+        var result = await _service.GetAllAsync(query, courseId);
+        return Ok(result);
+    }
+
     [HttpGet("{id:int}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
